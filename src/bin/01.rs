@@ -3,7 +3,6 @@ use std::{collections::HashMap, env::args, fs};
 fn main() {
     let args: Vec<String> = args().collect();
 
-
     let input = fs::read_to_string(&args[1])
         .unwrap()
         .trim()
@@ -16,7 +15,6 @@ fn main() {
 }
 
 fn part_one(left: &Vec<u32>, right: &Vec<u32>) -> u32 {
-
     let total: u32 = left.iter().zip(right.iter())
         .map(|(lv, rv)| lv.abs_diff(*rv))
         .sum();
